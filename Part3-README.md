@@ -114,7 +114,7 @@
 
 <br><br><br><br><br>
 ### Part 5; PetOwner
-* Ensure each of the test cases in the class [PetOwner]() successfully passes upon completion of each of the method stubs in the class [PetOwner]().
+* Ensure each of the test cases in the class PetOwner successfully passes upon completion of each of the method stubs in the class PetOwner.
     * `PetOwner(String name, Pet... pets)`
     * `void addPet(Pet pet)`
     * `void removePet(Pet pet)`
