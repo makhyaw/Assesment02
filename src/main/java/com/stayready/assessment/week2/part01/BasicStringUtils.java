@@ -7,7 +7,7 @@ public class BasicStringUtils {
      * @return concatenation of `string1` and `string2`
      */
     public static String concatentate(String string1, String string2) {
-        return null;
+        return string1 + string2;
     }
 
     /**
@@ -15,7 +15,9 @@ public class BasicStringUtils {
      * @return an identical string with characters in reverse order
      */
     public static String reverse(String string1) {
-        return null;
+        StringBuilder sb = new StringBuilder(string1);
+        sb.reverse();
+        return sb.toString();
     }
 
     /**
@@ -24,7 +26,14 @@ public class BasicStringUtils {
      * @return concatenation of the reverse of `string1` and reverse of `string2`
      */
     public static String reverseThenConcatenate(String string1, String string2) {
-        return null;
+        StringBuilder sb = new StringBuilder(string1);
+        sb.reverse();
+        String first = sb.toString();
+        StringBuilder sb2 = new StringBuilder(string2);
+        sb2.reverse();
+        String second = sb2.toString();
+
+        return first + second;
     }
 
     /**
@@ -33,15 +42,35 @@ public class BasicStringUtils {
      * @return `string` with `charactersToRemove` removed
      */
     public static String removeCharacters(String string, String charactersToRemove) {
-        return null;
-    }
+        StringBuilder result = new StringBuilder();
+        for (char c : string.toCharArray()) {
+            if (charactersToRemove.indexOf(c) == -1) {
+                result.append(c);
+            }
+        }
+        return result.toString();
+        
 
+    } 
+        
+    
     /**
      * @param string - the string to be manipulated
      * @param charactersToRemove - characters to be removed from the string
      * @return reverse of `string` with `charactersToRemove` removed
      */
     public static String removeCharactersThenReverse(String string, String charactersToRemove) {
-        return null;
+        StringBuilder result = new StringBuilder();
+        for (char x : string.toCharArray()) {
+            if (charactersToRemove.indexOf(x) == -1) {
+                result.append(x);
+                
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+            result.reverse();
+        
+        
+        return result.toString();
     }
 }
